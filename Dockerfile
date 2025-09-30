@@ -10,8 +10,8 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY export_mysql_to_s3.py /app/export_mysql_to_s3.py
+COPY ingesta.py /app/ingesta.py
 
 RUN mkdir -p /app/out
 
-CMD ["python", "/app/export_mysql_to_s3.py"]
+CMD ["python", "/app/ingesta.py"]
