@@ -86,7 +86,7 @@ def export_table_to_csv(engine, table_name: str, out_dir: str) -> str:
             index=False,
             sep=CSV_SEP,
             quoting=quote,
-            line_terminator=CSV_LINE_TERMINATOR,
+            lineterminator=CSV_LINE_TERMINATOR,
             header=not header_written,
         )
         row_count += len(chunk)
